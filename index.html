@@ -1,96 +1,229 @@
+<!--
+Author: MeyerZhao
+-->
 <!DOCTYPE html>
- <html lang="en"><head><meta charset="utf-8"/><meta http-equiv="X-UA-Compatible" content="IE=edge"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>AlphabetJS: The latest and greatest Javascript framework | My first web</title><style id="typography.js">html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block}audio:not([controls]){display:none;height:0}progress{vertical-align:baseline}[hidden],template{display:none}a{background-color:transparent;-webkit-text-decoration-skip:objects}a:active,a:hover{outline-width:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit;font-weight:bolder}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}img{border-style:none}svg:not(:root){overflow:hidden}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}button,input,optgroup,select,textarea{font:inherit;margin:0}optgroup{font-weight:700}button,input{overflow:visible}button,select{text-transform:none}[type=reset],[type=submit],button,html [type=button]{-webkit-appearance:button}[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner,button::-moz-focus-inner{border-style:none;padding:0}[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring,button:-moz-focusring{outline:1px dotted ButtonText}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-input-placeholder{color:inherit;opacity:.54}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}html{font:100%/1.5em georgia,serif;box-sizing:border-box;overflow-y:scroll;}*{box-sizing:inherit;}*:before{box-sizing:inherit;}*:after{box-sizing:inherit;}body{color:hsla(0,0%,0%,0.8);font-family:georgia,serif;font-weight:normal;word-wrap:break-word;font-kerning:normal;-moz-font-feature-settings:"kern", "liga", "clig", "calt";-ms-font-feature-settings:"kern", "liga", "clig", "calt";-webkit-font-feature-settings:"kern", "liga", "clig", "calt";font-feature-settings:"kern", "liga", "clig", "calt";}img{max-width:100%;margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}h1{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:inherit;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1.618rem;line-height:2.25rem;}h2{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:inherit;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1.33471rem;line-height:2.25rem;}h3{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:inherit;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1.21225rem;line-height:1.5rem;}h4{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:inherit;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:1rem;line-height:1.5rem;}h5{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:inherit;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:0.90825rem;line-height:1.5rem;}h6{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;color:inherit;font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;font-weight:bold;text-rendering:optimizeLegibility;font-size:0.86558rem;line-height:1.5rem;}hgroup{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}ul{margin-left:1.5rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;list-style-position:outside;list-style-image:none;}ol{margin-left:1.5rem;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;list-style-position:outside;list-style-image:none;}dl{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}dd{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}p{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}figure{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}pre{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;font-size:0.85rem;line-height:1.42;background:hsla(0,0%,0%,0.04);border-radius:3px;overflow:auto;word-wrap:normal;padding:1.5rem;}table{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;font-size:1rem;line-height:1.5rem;border-collapse:collapse;width:100%;}fieldset{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}blockquote{margin-left:1.5rem;margin-right:1.5rem;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}form{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}noscript{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}iframe{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}hr{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:calc(1.5rem - 1px);background:hsla(0,0%,0%,0.2);border:none;height:1px;}address{margin-left:0;margin-right:0;margin-top:0;padding-bottom:0;padding-left:0;padding-right:0;padding-top:0;margin-bottom:1.5rem;}b{font-weight:bold;}strong{font-weight:bold;}dt{font-weight:bold;}th{font-weight:bold;}li{margin-bottom:calc(1.5rem / 2);}ol li{padding-left:0;}ul li{padding-left:0;}li > ol{margin-left:1.5rem;margin-bottom:calc(1.5rem / 2);margin-top:calc(1.5rem / 2);}li > ul{margin-left:1.5rem;margin-bottom:calc(1.5rem / 2);margin-top:calc(1.5rem / 2);}blockquote *:last-child{margin-bottom:0;}li *:last-child{margin-bottom:0;}p *:last-child{margin-bottom:0;}li > p{margin-bottom:calc(1.5rem / 2);}code{font-size:0.85rem;line-height:1.5rem;}kbd{font-size:0.85rem;line-height:1.5rem;}samp{font-size:0.85rem;line-height:1.5rem;}abbr{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}acronym{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;}abbr[title]{border-bottom:1px dotted hsla(0,0%,0%,0.5);cursor:help;text-decoration:none;}thead{text-align:left;}td,th{text-align:left;border-bottom:1px solid hsla(0,0%,0%,0.12);font-feature-settings:tnum;-moz-font-feature-settings:tnum;-ms-font-feature-settings:tnum;-webkit-font-feature-settings:tnum;padding-left:1rem;padding-right:1rem;padding-top:0.75rem;padding-bottom:calc(0.75rem - 1px);}th:first-child,td:first-child{padding-left:0;}th:last-child,td:last-child{padding-right:0;}tt,code{background-color:hsla(0,0%,0%,0.04);border-radius:3px;font-family:"SFMono-Regular", Consolas,"Roboto Mono","Droid Sans Mono","Liberation Mono",Menlo,Courier,monospace;padding:0;padding-top:0.2em;padding-bottom:0.2em;}pre code{background:none;line-height:1.42;}code:before,code:after,tt:before,tt:after{letter-spacing:-0.2em;content:" ";}pre code:before,pre code:after,pre tt:before,pre tt:after{content:"";}</style><style>.demo1-ball{border-radius:99px;background-color:#fff;width:50px;height:50px;border:3px solid #fff;position:absolute;background-size:50px}.hljs-comment,.hljs-quote{color:#998;font-style:italic}.hljs-keyword,.hljs-selector-tag,.hljs-subst{color:#333;font-weight:700}.hljs-literal,.hljs-number,.hljs-tag .hljs-attr,.hljs-template-variable,.hljs-variable{color:teal}.hljs-doctag,.hljs-string{color:#d14}.hljs-section,.hljs-selector-id,.hljs-title{color:#900;font-weight:700}.hljs-subst{font-weight:400}.hljs-class .hljs-title,.hljs-type{color:#458;font-weight:700}.hljs-attribute,.hljs-name,.hljs-tag{color:navy;font-weight:400}.hljs-link,.hljs-regexp{color:#009926}.hljs-bullet,.hljs-symbol{color:#990073}.hljs-built_in,.hljs-builtin-name{color:#0086b3}.hljs-meta{color:#999;font-weight:700}.hljs-deletion{background:#fdd}.hljs-addition{background:#dfd}.hljs-emphasis{font-style:italic}.hljs-strong{font-weight:700}@media only screen and (min-width:700px){.breakpoint-min-width-700{display:block}.breakpoint-max-width-700{display:none}}@media only screen and (max-width:700px){.breakpoint-min-width-700{display:none}.breakpoint-max-width-700{display:block}}</style><style>
-                  a {
-                    color: rgb(136,68,153);
-                  }
-                  .ball-0 {
-                    background-image: url(/docs/some-react-code/0.jpg);
-                  }
-                  .ball-1 {
-                    background-image: url(/docs/some-react-code/1.jpg);
-                  }
-                  .ball-2 {
-                    background-image: url(/docs/some-react-code/2.jpg);
-                  }
-                  .ball-3 {
-                    background-image: url(/docs/some-react-code/3.jpg);
-                  }
-                  .ball-4 {
-                    background-image: url(/docs/some-react-code/4.jpg);
-                  }
-                  .ball-5 {
-                    background-image: url(/docs/some-react-code/5.jpg);
-                  }
-                </style></head><body><div id="react-mount"><div data-reactroot="" data-reactid="1" data-react-checksum="-1564146785"><div style="background:rgb(136,68,153);color:rgb(243,237,245);margin-bottom:2.25rem;" data-reactid="2"><div style="max-width:960px;margin-left:auto;margin-right:auto;padding-left:1.125rem;" data-reactid="3"><div style="padding:1.125rem 0;" data-reactid="4"><div style="float:left;margin-left:0%;margin-right:1.694915254237288%;width:32.20338983050847%;clear:none;height:24px;" data-reactid="5"><a style="text-decoration:none;color:rgb(243,237,245);font-size:1.59375rem;" href="/" data-reactid="6">My first web</a><span style="display:block;clear:both;" data-reactid="7"> </span></div><div style="float:right;margin-left:0%;margin-right:0%;width:66.10169491525423%;clear:none;" data-reactid="8"><a style="float:right;color:rgb(243,237,245);text-decoration:none;margin-left:0.75rem;" href="https://github.com/gatsbyjs/gatsby" data-reactid="9">Github</a><a style="background:rgb(136,68,153);color:rgb(243,237,245);float:right;text-decoration:none;padding-left:0.75rem;padding-right:0.75rem;padding-bottom:1.125rem;margin-bottom:-1.5rem;padding-top:1.5rem;margin-top:-1.5rem;" href="/examples/" data-reactid="10">Examples</a><a style="background:rgb(136,68,153);color:rgb(243,237,245);float:right;text-decoration:none;padding-left:0.75rem;padding-right:0.75rem;padding-bottom:1.125rem;margin-bottom:-1.5rem;padding-top:1.5rem;margin-top:-1.5rem;" href="/docs/" data-reactid="11">Documentation</a><span style="display:block;clear:both;" data-reactid="12"> </span></div><span style="display:block;clear:both;" data-reactid="13"> </span></div><span style="display:block;clear:both;" data-reactid="14"> </span></div></div><div style="max-width:960px;margin-left:auto;margin-right:auto;padding:1.5rem 1.125rem;padding-top:0;" data-reactid="15"><div class="markdown" data-reactid="16"><h1 data-reactid="17">AlphabetJS: The latest and greatest Javascript framework</h1><div data-reactid="18"><h2>Inops magnis Acrisius remisit Circes</h2>
-<p>Lorem markdownum <em>formasque</em> terram, fatum adnuit memores, stipulis
-virgine,
-ullo vires, potiere proles. Modo <a href="http://gifctrl.com/">nec Aesacon</a> et
-vultum
-praeter fata gemitus panda. Factaque sibi repressit saltem, flammaeque
-ille per
-et opus flecti tellus inter: curru sidus. O iunxit ita erat, frondes,
-hac proles
-inritaturque?</p>
-<h2>Sed videt vestem vagatur</h2>
-<p>Palato rubentis enim, ora fontes lunaria, ventis iacebant pariter. Illa
-latet
-primae concedimus factis, animo ab nec vagantem praemia sustollit.
-Secunda
-detque ecce, sua vixque fontes <em>quantam</em> aede.</p>
-<h2>Cuique in nullum futuri</h2>
-<p>Amphitryoniaden sanguine et nefas lactentis iuvencae scit? Venis et dedi
-hoc
-thalamoque palmite fata, nec tot. Procorum super <a href="http://reddit.com/r/thathappened">patre aranea
-passis</a> et regemque inque dedimus
-<a href="http://stoneship.org/">haerent
-lumina ponunt</a>, Rhodopeius lacertis! Conceperat
-tellus:
-hunc id nymphe en adest evolvere? Auro nescio extemplo triones et
-sceleratus
-queruntur inpavidus ab suos concutit, Ionio aut, de quo cinisque.</p>
-<pre><code class="language-javascript"><span class="hljs-keyword">import</span> Typography <span class="hljs-keyword">from</span> <span class="hljs-string">'typography'</span>
-<span class="hljs-keyword">import</span> CodePlugin <span class="hljs-keyword">from</span> <span class="hljs-string">'typography-plugin-code'</span>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Personal</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- <link rel="stylesheet" href="css/bootstrap-theme.css"> -->
+	<link rel="stylesheet" href="css/font-awesome.min.css">	
+	<link rel="stylesheet" href="css/style.css">
+	<style>
+		.typed-cursor{
+		    opacity: 1;
+		    -webkit-animation: blink 0.7s infinite;
+		    -moz-animation: blink 0.7s infinite;
+		    animation: blink 0.7s infinite;
+		}
+		@keyframes blink{
+		    0% { opacity:1; }
+		    50% { opacity:0; }
+		    100% { opacity:1; }
+		}
+		@-webkit-keyframes blink{
+		    0% { opacity:1; }
+		    50% { opacity:0; }
+		    100% { opacity:1; }
+		}
+		@-moz-keyframes blink{
+		    0% { opacity:1; }
+		    50% { opacity:0; }
+		    100% { opacity:1; }
+		}
+	</style>
 
-<span class="hljs-keyword">const</span> options = {
-  <span class="hljs-attr">baseFontSize</span>: <span class="hljs-string">'16px'</span>,
-  <span class="hljs-attr">baseLineHeight</span>: <span class="hljs-number">1.5</span>,
-  <span class="hljs-attr">bodyFontFamily</span>: [<span class="hljs-string">'Helvetica Neue'</span>, <span class="hljs-string">'Segoe UI'</span>, <span class="hljs-string">'Helvetica'</span>, <span class="hljs-string">'Arial'</span>, <span class="hljs-string">'sans-serif'</span>],
-  <span class="hljs-attr">headerFontFamily</span>: [<span class="hljs-string">'Helvetica Neue'</span>, <span class="hljs-string">'Segoe UI'</span>, <span class="hljs-string">'Helvetica'</span>, <span class="hljs-string">'Arial'</span>, <span class="hljs-string">'sans-serif'</span>],
-  <span class="hljs-attr">bodyWeight</span>: <span class="hljs-number">400</span>,
-  <span class="hljs-attr">headerWeight</span>: <span class="hljs-number">700</span>,
-  <span class="hljs-attr">boldWeight</span>: <span class="hljs-number">700</span>,
-  <span class="hljs-attr">scale</span>: <span class="hljs-number">1.618</span>,
-  <span class="hljs-attr">plugins</span>: [
-    <span class="hljs-keyword">new</span> CodePlugin(),
-  ],
-}
+</head>
+<body>
 
-<span class="hljs-keyword">const</span> typography = <span class="hljs-keyword">new</span> Typography(options)
+	<div id="scroll-top-area" >
+        <a href="#welcome-area"><i class="fa fa-angle-double-up" ></i></a>
+    </div>
+	
+	<header>
+		<nav class="navbar navbar-inverse navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#" style="font-weight: 700;color: #fff">MeyerZhao</a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse" aria-expanded="false" style="height: 1px;">
+					<ul class="nav navbar-nav navbar-right">
+						<li><a href="#welcome-area">Home</a></li>
+						<li><a href="#about">About</a></li>
+						<li><a href="#services">Services</a></li>
+						<li><a href="#work">Work</a></li>
+						<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div>			
+			</div>
+		</nav>
+	</header>
 
-<span class="hljs-comment">// Hot reload typography in development.</span>
-<span class="hljs-keyword">if</span> (process.env.NODE_ENV !== <span class="hljs-string">'production'</span>) {
-  typography.injectStyles()
-}
+	<section class="welcome-area" id="welcome-area">
+        <div class="welcome-text">
+        	<div class="head-text">
+        		<div class="tagline">
+	        		I'm <span class="element " style="font-weight: 700;"></span>
+        		</div>
+        		<h2 class="sub-tagline">web developer / designer / geek</h2>
+        	</div>        	
+        	<p>
+	        	<a class="btn btn-lg btn-warning" href="#" role="button">Sign up today</a>
+        	</p>
+        </div>
+	</section>
+	
+	<main>
+		<section class="about" id="about" >
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-5 col-md-4">
+						<div class="about-img">
+							<img class="img-responsive" src="images/about.jpg" alt="">
+						</div>
+					</div>
+					<div class="col-lg-7 col-md-8">
+						<div class="about-text">
+							<h4 class="section-title page-header">ABOUT ME</h4>
+							<p>
+								I am Carl Watson.I am a web designer.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
+							</p>
+							<p>
+								Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Pellentesque in ipsum id orci porta dapibus. Nulla porttitor accumsan tincidunt ipsum id orci porta dapibus. Nulla porttitor accumsan tincidunt. Nulla porttitor accumsan tincidunt ipsum id orci porta dapibus. Nulla porttitor accumsan tincidunt.
+							</p>
+							<a href="我的简历.rar" class="btn btn-lg btn-primary">
+								DOWNLOAD MY CV <i class="fa fa-download" aria-hidden="true"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
 
-<span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> typography
-</code></pre>
-<h2>Diu fas tractaque Tethyn vidi exigere</h2>
-<p>Aenea inque est flexo armos et bovis! Naides alta vocisque videt fit
-cervum
-elusam Macareus vicisse illis unguibus. Multorumque tumulo
-<strong>praetemptatque
-occidit</strong> ingentique et summas Nili virgo vaticinata facinus positae
-vestes,
-<em>exstinguere iuvat</em> Lycaona postquam.</p>
-<ul>
-<li>Multaque in coloque</li>
-<li>Emicuit errandum</li>
-<li>Mitior ego verbis interdum occupat feruntur</li>
-<li>Parili Meleagros fluit et timorem</li>
-</ul>
-<p>Gemit petit, cingentia quis carens, duxere es sortem corpora quamvis?
-<strong>Palmis
-visa</strong>, nec deo fuit Amphissos, et sprevere Acmona illa habuissem
-<strong>asper</strong>. Et
-<a href="http://reddit.com/r/thathappened">nemus</a> Iunone: et deae!</p>
-</div></div><span style="display:block;clear:both;" data-reactid="19"> </span></div></div></div><script src="/bundle.js?t=1490779332584"></script></body></html>
+		<section id="services" style="background: #f2f2f2">
+			<h1 class="section-title">SERVICE</h1>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="alert alert-success" role="alert"> <strong>Well done!</strong>
+							You successfully read this important alert message.
+						</div>
+						<div class="alert alert-info" role="alert"> <strong>Heads up!</strong>
+							This alert needs your attention, but it's not super important.
+						</div>
+						<div class="alert alert-warning" role="alert"> <strong>Warning!</strong>
+							Best check yo self, you're not looking too good.
+						</div>
+						<div class="alert alert-danger" role="alert"> <strong>Oh snap!</strong>
+							Change a few things up and try submitting again.
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="work" >
+			<h1 class="section-title">WORK</h1>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="jumbotron">
+							<h1>WORK</h1>
+						</div>
+						<div class="jumbotron">
+							<h1>WORK</h1>
+						</div>
+						<div class="jumbotron">
+							<h1>WORK</h1>
+						</div>
+						<div class="jumbotron">
+							<h1>WORK</h1>
+						</div>
+						<div class="jumbotron">
+							<h1>WORK</h1>
+						</div>
+						<div class="jumbotron">
+							<h1>WORK</h1>
+						</div>
+						<div class="jumbotron">
+							<h1>WORK</h1>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section id="contact" >
+			<h1 class="section-title">CONTACT</h1>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="jumbotron">
+							
+						</div>
+						<div class="jumbotron">
+							
+						</div>
+						<div class="jumbotron">
+							
+						</div>
+						<div class="jumbotron">
+							
+						</div>
+						<div class="jumbotron">
+							
+						</div>
+						<div class="jumbotron">
+							
+						</div>
+						<div class="jumbotron">
+							
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="copyright">
+                        <p>Copyright © 2017 Experta | All rights reserved</p>
+                    </div>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<script src="js/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/singlepagenav.jquery.js"></script>
+	<script src="js/typed.js"></script>
+	<script src="js/main.js"></script>
+	<script>
+		// // Highlight the top nav as scrolling occurs
+		// $('body').scrollspy({target: '.navbar-fixed-top'})
+
+		// // jQuery for page scrolling feature - requires jQuery Easing plugin
+		// $(function() {$('body').on('click', 'a.scrollable', function(event) {
+		//   var singleNav = $('.navbar');	
+		//   var $anchor = $(this);
+		//   $('html, body').stop().animate({
+		//   	scrollTop: $($anchor.attr('href')).offset().top},500);
+		//   event.preventDefault();
+		//   });
+		// });
+
+	</script>
+</body>
+</html>
